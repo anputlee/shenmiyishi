@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>神秘奶龙召唤仪式</title>
+    <style>
+        h1 {
+            text-align: center;
+            transition: color 1s; /* 添加过渡效果 */
+        }
+    </style>
+
+<style>
+    .scrolling-text {
+        white-space: nowrap; /* 不允许换行 */
+        overflow: hidden; /* 隐藏超出部分 */
+        box-sizing: border-box; /* 包含边框和内边距 */
+        animation: scrolling 10s linear infinite; /* 设定动画属性 */
+    }
+
+    @keyframes scrolling {
+        0% {
+            transform: translateX(100%); /* 从右侧开始 */
+        }
+        100% {
+            transform: translateX(-100%); /* 向左移出视图 */
+        }
+    }
+</style>
+</head>
+<body>
+    <h1 id="title">恭喜xsy先生成功领取神秘烤批大礼包</h1>
+    
+    <div style="width: 70%; margin: 0 auto;">
+        <p>恭喜xsy先生成功领取神秘烤批大礼包，里面有一份神秘奶龙女，请小心保管！</p>
+        <p>祝早日雷神满命 烤批真皆 颠七榜一 a科#1</p>
+        
+    </div>
+    <div class="scrolling-text">
+        <b>迟到的生日快乐</b>
+    </div>
+    <img src="IMG_0100.jpeg" alt="神秘奶龙女" height="605" width="417">
+    <script>
+        const colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink'];
+        let currentIndex = 0;
+
+        function changeColor() {
+            const title = document.getElementById('title');
+            title.style.color = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length; // 循环颜色
+        }
+
+        setInterval(changeColor, 1000); // 每1000毫秒（1秒）改变一次颜色
+    </script>
+</body>
+</html>
